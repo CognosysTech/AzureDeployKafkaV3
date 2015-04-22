@@ -122,7 +122,7 @@
         "sourceImageName": "[concat('/',subscription().subscriptionId,'/services/images/',variables('vmSourceImageName'))]",
 	"computerNamePrefixZoo": "kafkazoo",
         "computerNamePrefix": "kafkanode",
-        "scriptUrl": "https://raw.githubusercontent.com/CognosysTech/AzureDeployKafkaV2/master/",
+        "scriptUrl": "https://raw.githubusercontent.com/CognosysTech/AzureDeployKafkaV3/master/",
         "templateUrl": "[variables('scriptUrl')]",
         "sharedTemplateName": "shared-resources",
         "jumpboxTemplateName": "jumpbox-resources-",
