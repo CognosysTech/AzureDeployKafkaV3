@@ -120,7 +120,6 @@
         "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
         "subnetRef": "[concat(variables('vnetID'),'/subnets/',parameters('subnetName'))]",
         "sourceImageName": "[concat('/',subscription().subscriptionId,'/services/images/',variables('vmSourceImageName'))]",
-	"computerNamePrefixZoo": "kafkazoo",
         "computerNamePrefix": "kafkanode",
         "scriptUrl": "https://raw.githubusercontent.com/CognosysTech/AzureDeployKafkaV3/master/",
         "templateUrl": "[variables('scriptUrl')]",
@@ -212,9 +211,6 @@
                     },
                     "computerNamePrefix": {
                         "value": "[variables('computerNamePrefix')]"
-                    },
-                    "computerNamePrefixZoo": {
-                        "value": "[variables('computerNamePrefixZoo')]"
                     }
                 }
             }
@@ -295,7 +291,7 @@
                     "platformGuestAgent": "true"
                 },
                 "osProfile": {
-                    "computername": "[concat(variables('computerNamePrefixZoo'), copyIndex())]",
+                    "computername": "[concat(variables('computerNamePrefix'),'z', copyIndex())]",
                     "adminUsername": "[parameters('adminUsername')]",
                     "adminPassword": "[parameters('adminPassword')]",
                     "linuxOperatingSystemProfile": {
