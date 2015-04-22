@@ -134,12 +134,12 @@
         "tshirtSizeM": {
             "numberOfZookeeperInstances": 3,
 			"numberOfKafkaInstances" : 3,
-            "vmSize": "Standard_A2"
+            "vmSize": "Standard_A1"
         },
         "tshirtSizeL": {
-            "numberOfZookeeperInstances": 4,
-			"numberOfKafkaInstances" : 5,
-            "vmSize": "Standard_A3"
+            "numberOfZookeeperInstances": 5,
+			"numberOfKafkaInstances" : 7,
+            "vmSize": "Standard_A7"
         },
         "numberOfZookeeperInstances": "[variables(concat('tshirtSize', parameters('tshirtSize'))).numberOfZookeeperInstances]",
 		"numberOfKafkaInstances": "[variables(concat('tshirtSize', parameters('tshirtSize'))).numberOfKafkaInstances]",
